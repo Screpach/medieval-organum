@@ -1,0 +1,79 @@
+.keyboard-wrapper {
+  display: inline-flex;
+  position: relative;
+  user-select: none;
+  background: #333;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* White Keys */
+.white-key {
+  width: 40px;
+  height: 200px;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border: 1px solid #ccc;
+  border-radius: 0 0 3px 3px;
+  position: relative; /* Anchor for black keys */
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+  font-size: 10px;
+  color: #555;
+  transition: background 0.1s;
+}
+
+.white-key:active, .white-key.active {
+  background: #ddd;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Black Key Container (The "Gap" Filler) */
+.black-key-group {
+  position: absolute;
+  top: 0;
+  left: 26px; /* Offset to straddle the line between white keys */
+  width: 28px;
+  height: 120px;
+  z-index: 2;
+  display: flex; /* Split left/right */
+  border-radius: 0 0 2px 2px;
+  overflow: hidden;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* The actual split buttons */
+.split-key {
+  flex: 1;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  color: transparent; /* Hide text usually */
+  transition: background 0.1s;
+}
+
+/* Left side (Flat) */
+.split-key.flat {
+  background: linear-gradient(to bottom, #222 0%, #444 100%);
+  border-right: 1px solid #555;
+}
+.split-key.flat:active {
+  background: #111;
+}
+
+/* Right side (Sharp) */
+.split-key.sharp {
+  background: linear-gradient(to bottom, #222 0%, #444 100%);
+}
+.split-key.sharp:active {
+  background: #111;
+}
+
+/* Hover tooltips or highlights could go here */
+.split-key:hover {
+  opacity: 0.9;
+}
