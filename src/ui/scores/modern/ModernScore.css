@@ -1,0 +1,30 @@
+.modern-score-wrapper {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto; /* Handle long chants */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.modern-score-wrapper h3 {
+  margin-top: 0;
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.vexflow-container {
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.score-placeholder {
+  color: #999;
+  font-style: italic;
+  padding: 40px;
+  text-align: center;
+}
